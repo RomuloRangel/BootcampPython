@@ -1,12 +1,33 @@
 # 1) Solicita ao usuário que digite seu nome
+try:
+    nome = input('Digite seu nome: ')
 
-nome = input('Digite seu nome: ')
+    if len(nome) == 0:
+        print('O nome não pode ser vazio')
+    elif isinstance(nome, str):
+        print('Nome valido')
+    else:
+        print('Nome invalido ! ')
+except ValueError as e:
+    print('e')
+    
+
+
 
 # 2) Solicita ao usuário que digite o valor do seu salário
 
 # Converte a entrada para um número de ponto flutuante
+try:
+    
+    salario = float(input('Digite seu salario: '))
 
-salario = float(input('Digite seu salario: '))
+    if salario < 0:
+        print('O valor não pode ser negativo ! ')
+    else:
+        print('Salario valido')
+        
+except ValueError as e:
+    print(f'Valor do error Correspode a {e}')
 
 # 3) Solicita ao usuário que digite o valor do bônus recebido
 # Converte a entrada para um número de ponto flutuante
